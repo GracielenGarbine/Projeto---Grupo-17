@@ -1,10 +1,9 @@
 {
-  "name": "motiva-cli",
+  "name": "receita-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "bin": {
-    "motiva": "./index.js"
+    "receita": "./receitas.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,9 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "chalk": "^5.4.1",
-    "figlet": "^1.8.2",
-    "node-fetch": "^3.3.2"
+    "chalk": "^4.1.2",
+    "node-fetch": "^2.7.0"
   }
 }
-
