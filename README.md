@@ -10,4 +10,3 @@ Um projeto simples de linha de comando (CLI) feito em Node.js que busca receitas
 📦 Tecnologias
 
 Node.js
-node-fetch
