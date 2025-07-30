@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+// Arquivo receitas.js
+
+// Nome: Gracielen --- Grupo 17 ---//
+
+const fetch = require('node-fetch');
+const chalk = require('chalk');
+
+const [,, comando, parametro] = process.argv;
+
+const API_RANDOM = 'https://www.themealdb.com/api/json/v1/1/random.php';
+const API_INGREDIENTE = (ingrediente) =>
+  `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingrediente}`;
+
+const API_DETALHES = (id) =>
+  `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+
+async function receitaAleatoria() {
+  const res = await fetch(API_RANDOM);
+  const data = await res.json();
+  const receita = data.meals[0];
+
+  exibirReceita(receita);
+}
+
+async function receitaPorIngrediente(ingrediente) {
+  const res = await fetch(API_INGREDIENTE(ingrediente));
+  const data = await res.json();
+
+  if (!data.meals) {
+    console.log(chalk.red(`Nenhuma receita com "${ingrediente}".`));
+    return;
+  }
+
+  const primeira = data.meals[0];
+  const detalhes = await fetch(API_DETALHES(primeira.idMeal));
+  const detalhado = await detalhes.json();
+
+  exibirReceita(detalhado.meals[0]);
+}
+
+function exibirReceita(receita) {
+  console.log(chalk.green.bold('\n🍽 Receita: ') + chalk.cyan(receita.strMeal));
+  console.log(chalk.green('🌎 Origem:'), receita.strArea);
+  console.log(chalk.green('🧾 Categoria:'), receita.strCategory);
+
+  console.log(chalk.yellow('\n🧂 Ingredientes:'));
+  for (let i = 1; i <= 20; i++) {
+    const ingrediente = receita[`strIngredient${i}`];
+    const medida = receita[`strMeasure${i}`];
+    if (ingrediente) {
+      console.log(`- ${ingrediente} (${medida})`);
+    }
+  }
+
+  console.log(chalk.yellow('\n👩‍🍳 Instruções:\n'));
+  console.log(receita.strInstructions);
+
+  if (receita.strYoutube) {
+    console.log(chalk.blue('\n🎥 Vídeo:'), receita.strYoutube);
+  }
+}
+
+if (comando === 'aleatoria') {
+  receitaAleatoria();
+} else if (comando === 'buscar' && parametro) {
+  receitaPorIngrediente(parametro);
+} else {
+  console.log(chalk.magenta('\nUso:'));
+  console.log('  receita aleatoria');
+  console.log('  receita buscar frango');
+};
