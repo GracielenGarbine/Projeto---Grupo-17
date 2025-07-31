@@ -68,21 +68,30 @@ Funcionalidades:
 
 🧮 Calcula e exibe o valor convertido formatado no terminal.
 
-5. 🤖 CLI com ChatGPT / IA
+5. ☀️ 🌧️CLI do CLima
 Descrição:
-Um CLI que utiliza a API do ChatGPT para funcionalidades como geração de ideias criativas, sumarização de texto, tradução e análise de sentimento.
+Busca o clima atual da cidade informada
 
-Pontos importantes:
+Exibe temperatura e condição (ex: ☀️, 🌧️, 🌫️) diretamente no terminal
 
-🔑 Usa chave de API da OpenAI, gerenciada de forma segura com variáveis de ambiente (.env).
+Não requer chave de API
 
-📡 Realiza requisições POST com corpo JSON para a API.
 
-🧩 Extrai respostas do objeto JSON aninhado retornado.
+✅ Pontos Importantes
+100% gratuito: usa a API pública wttr.in, sem necessidade de autenticação ou chave de API.
 
-⚠️ Atenção aos custos de uso da API durante o desenvolvimento.
+Sem complicação: basta digitar o nome da cidade como argumento no terminal.
 
-🛠️ Pode usar bibliotecas auxiliares como dotenv para variáveis de ambiente e yargs ou commander para parsing de argumentos.
+Compatível com qualquer sistema operacional que tenha Node.js instalado.
+
+Saída rápida e amigável: mostra a previsão atual com ícones de clima (ex: ☀️ 🌧️ 🌫️).
+
+Ideal para projetos simples ou educacionais, com fácil integração em outros scripts.
+
+Suporte a nomes com espaços: funciona com cidades como "Fortaleza" ou "São Paulo".
+
+
+
 
 📦 Tecnologias utilizadas
 
@@ -99,6 +108,9 @@ Pontos importantes:
 🔧 Git e GitHub para versionamento
 
 🚀 Publicação no NPM (planejado)
+
+🧩 ES Modules (import/export) — Para organização moderna do código.
+
 
 ---
 

@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 const cep_input = process.argv[2];
 
 if (!cep_input) {
