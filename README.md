@@ -50,8 +50,6 @@ Um projeto simples de linha de comando (CLI) feito em Node.js que consulta dados
 Descrição:
 Projeto feito em Node.js que busca receitas da API pública TheMealDB e exibe no terminal.
 
-Comandos disponíveis:
-
 🎲 receita aleatoria → Exibe uma receita aleatória (em inglês).
 
 🔍 receita buscar <ingrediente> → Busca receitas contendo o ingrediente informado.
