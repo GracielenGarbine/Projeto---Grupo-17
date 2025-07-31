@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Projeto - Criando um CLI
 
