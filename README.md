@@ -29,48 +29,79 @@ Construir ferramentas simples de linha de comando (CLI) que:
 
 ---
 
-## CLIs do Grupo 17
+🚀 CLIs do Grupo 17
+1. ✨ CLI - Frases de Motivação
+Descrição:
+Uma ferramenta CLI que exibe frases motivacionais curtas em português diretamente no terminal.
 
-### CLI - Frases de Motivação
+Funcionalidades:
 
-- **Descrição:** Uma ferramenta CLI que exibe frases motivacionais curtas em português diretamente no terminal.  
-- **Funcionalidades:**  
-  - Exibe uma frase motivacional aleatória ao ser executada;  
-  - Feita em Node.js com uso das bibliotecas `chalk` e `figlet` para uma apresentação estilizada.  
+🎯 Exibe uma frase motivacional aleatória ao ser executada.
 
-> Este é o primeiro CLI do nosso grupo, focado em apresentar a base do projeto e práticas essenciais.
+🎨 Desenvolvida em Node.js utilizando as bibliotecas chalk e figlet para uma apresentação estilizada.
+
+Observação:
+Este é o primeiro CLI do nosso grupo, focado em apresentar a base do projeto e práticas essenciais.
+
+2. 📮 CLI – Consulta de CEP
+Descrição:
+Um projeto simples de linha de comando (CLI) feito em Node.js que consulta dados de endereço a partir de um CEP usando a API pública ViaCEP.
+
+3. 🍽️ CLI de Receitas
+Descrição:
+Projeto feito em Node.js que busca receitas da API pública TheMealDB e exibe no terminal.
+
+Comandos disponíveis:
+
+🎲 receita aleatoria → Exibe uma receita aleatória (em inglês).
+
+🔍 receita buscar <ingrediente> → Busca receitas contendo o ingrediente informado.
+
+4. 💱 CLI de Dados de Câmbio
+Descrição:
+Desenvolve um CLI que converte valores entre moedas usando uma API pública de cotação de moedas.
+
+Funcionalidades:
+
+💵 Recebe valor, moeda de origem e moeda de destino como argumentos.
+
+🔄 Busca taxas de conversão na API.
+
+🧮 Calcula e exibe o valor convertido formatado no terminal.
+
+5. 🤖 CLI com ChatGPT / IA
+Descrição:
+Um CLI que utiliza a API do ChatGPT para funcionalidades como geração de ideias criativas, sumarização de texto, tradução e análise de sentimento.
+
+Pontos importantes:
+
+🔑 Usa chave de API da OpenAI, gerenciada de forma segura com variáveis de ambiente (.env).
+
+📡 Realiza requisições POST com corpo JSON para a API.
+
+🧩 Extrai respostas do objeto JSON aninhado retornado.
+
+⚠️ Atenção aos custos de uso da API durante o desenvolvimento.
+
+🛠️ Pode usar bibliotecas auxiliares como dotenv para variáveis de ambiente e yargs ou commander para parsing de argumentos.
+
+📦 Tecnologias utilizadas
+
+💻 Node.js
+
+📦 npm
+
+⚡ Fetch com async/await
+
+🖥️ Manipulação do console (console.log, formatação com chalk, figlet)
+
+🧩 Manipulação e validação de argumentos da linha de comando
+
+🔧 Git e GitHub para versionamento
+
+🚀 Publicação no NPM (planejado)
 
 ---
-# 📦 CLI – Consulta de CEP
-
-Este é um projeto simples de linha de comando (CLI) feito em Node.js que consulta dados de um CEP usando a API pública ViaCEP.
----
-# CLI de Receitas 🍽 
-Um projeto simples de linha de comando (CLI) feito em Node.js que busca receitas da API pública [TheMealDB](https://www.themealdb.com/api.php) e exibe no terminal.
-
-## ✅ Comandos
-
-- receita aleatoria → Exibe uma receita aleatória mas em inglês
-- receita buscar <ingrediente> → Busca uma receita com o ingrediente informado
-
-📦 Tecnologias
-
-Node.js
----
-
-## Tecnologias e Conceitos Aplicados
-
-- Node.js  
-- npm  
-- Fetch com async/await  
-- Manipulação do console (console.log, formatação com chalk, figlet)  
-- Manipulação e validação de argumentos da linha de comando  
-- Git e GitHub para versionamento  
-- Publicação no NPM (planejado)
-
----
-
-## Como rodar o CLI 1 - Motiva
 
 1. Clone o repositório:
 
